@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://kit.fontawesome.com/a3f2df2696.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">با ما در تماس باشید</h3>
+          <p class="text1">
+            هر مشکل یا سوالی که داشتید، به راحتی می‌توانید از طریق این فرم با ما در میان بگذارید.
+          </p>
+          <p class="text2">
+            مطمئن باشید در
+            سریع‌ترین زمان ممکن پاسخ‌گوی شما خواهیم بود.
+          </p>
+
+          <div class="info-caontainer">
+            <div>
+              <div class="information">
+                <img src="./assets/images/location.png" class="icon" alt="" />
+                <p>آذربایجان‌شرقی، تبریز، ولیعصر جنوبی</p>
+              </div>
+              <div class="information">
+                <img src="./assets/images/email.png" class="icon" alt="" />
+                <p>amezinli@gmail.com</p>
+              </div>
+              <div class="information">
+                <img src="./assets/images/phone.png" class="icon" alt="" />
+                <p>09109660101</p>
+              </div>
+            </div>
+  
+            <div class="social-media">
+              <p>سایر راه‌های ارتباطی</p>
+              <div class="social-icons">
+                <a href="#">
+                  <i class="fa-brands fa-whatsapp fa-xl"></i>
+                <a href="#">
+                  <i class="fab fa-instagram fa-xl"></i>
+                </a>
+                <a href="#">
+                  <i class="fa-solid fa-paper-plane fa-beat-fade"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="contact-form">
+          <form id="contactForm" action="index.html" autocomplete="off" onsubmit="return validateForm(event)">
+            <h3 class="title">فرم تماس با ما</h3>
+            <div class="input-container">
+                <label for="name">نام کامل</label>
+                <input type="text" id="name" name="name" class="input" required oninvalid="this.setCustomValidity('لطفاً نام کامل خود را وارد کنید')" oninput="setCustomValidity('')"/>
+                <span>نام کامل</span>
+                <i class="label-icon fa-solid fa-user"></i>
+            </div>
+            <div class="input-container">
+                <label for="email">ایمیل</label>
+                <input type="email" id="email" name="email" class="input" required oninvalid="this.setCustomValidity('لطفاً ایمیل خود را بصورت درست وارد کنید')" oninput="setCustomValidity('')"/>
+                <span>ایمیل</span>
+                <i class="label-icon fa-solid fa-envelope"></i>
+            </div>
+            <div class="input-container">
+                <label for="phone">شماره همراه</label>
+                <input type="tel" id="phone" name="phone" class="input" pattern="^09\d{9}$" />
+                <span>شماره همراه</span>
+                <i class="label-icon fa-solid fa-mobile"></i>
+            </div>
+            <div class="input-container textarea">
+                <label for="message">متن پیام</label>
+                <textarea id="message" name="message" class="input" required oninvalid="this.setCustomValidity('لطفاً متنی برای پیام خود بنویسید')" oninput="setCustomValidity('')"></textarea>
+                <span>متن پیام</span>
+                <i class="label-icon fa-solid fa-comment"></i>
+            </div>
+            <div class="contact-button">
+              <button class="btn upload">
+                فایل ضمیمه
+                <input type="file" name="attachment">
+                <i class="fa-solid fa-paperclip"></i>
+              </button>
+              <input type="submit" value="ارسال پیام" class="btn" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
